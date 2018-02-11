@@ -3,7 +3,7 @@ server:
 spring:
   datasource:
     driverClassName: com.mysql.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/aaaaaa?useUnicode=true&amp;characterEncoding=UTF-8
+    url: jdbc:mysql://localhost:3306/springboot?useUnicode=true&amp;characterEncoding=UTF-8
     username: root
     password: root
     type: com.alibaba.druid.pool.DruidDataSource
@@ -23,4 +23,7 @@ spring:
   devtools:
     restart:
      exclude: json/**,public/**,logs/**,images/**
-        
+
+age: 18
+name: jason
+manInfo: "age:${age},name:${name}"      
