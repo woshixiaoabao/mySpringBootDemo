@@ -18,21 +18,19 @@ import lombok.Setter;
 @Getter
 @Setter
 @Entity
-@Table(name = "tb_user")
-public class User implements Serializable {
+@Table(name = "tb_role")
+public class Role implements Serializable {
+
   /**
    * 
    */
-  private static final long serialVersionUID = 4066636337069049442L;
-
+  private static final long serialVersionUID = 1316972025690742605L;
+  
   @Id
   @GeneratedValue(strategy = GenerationType.AUTO)
   private int id;
-  private String account;
-  private String password;
-  private String userName;
-
-  @OneToMany(mappedBy = "userId", cascade = CascadeType.ALL)
-  private Set<RoleUser> roles = new HashSet<RoleUser>();
-
+  private String name;
+  
+  @OneToMany(mappedBy = "roleId",cascade=CascadeType.ALL)
+  private Set<RoleUser> ru = new HashSet<RoleUser>();
 }
