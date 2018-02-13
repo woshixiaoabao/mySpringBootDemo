@@ -26,6 +26,7 @@ public class RoleUser implements Serializable {
   @Id
   @GeneratedValue(strategy = GenerationType.AUTO)
   private int id;
+
   @ManyToOne
   @JoinColumn(name = "role_id", referencedColumnName = "id")
   private Role roleId;

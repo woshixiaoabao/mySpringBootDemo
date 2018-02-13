@@ -33,4 +33,7 @@ public class Role implements Serializable {
   
   @OneToMany(mappedBy = "roleId",cascade=CascadeType.ALL)
   private Set<RoleUser> ru = new HashSet<RoleUser>();
+  
+  @OneToMany(mappedBy = "roleId",cascade=CascadeType.ALL)
+  private Set<RolePermission> rp = new HashSet<RolePermission>();
 }

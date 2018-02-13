@@ -33,6 +33,6 @@ public class User implements Serializable {
   private String userName;
 
   @OneToMany(mappedBy = "userId", cascade = CascadeType.ALL)
-  private Set<RoleUser> roles = new HashSet<RoleUser>();
+  private Set<RoleUser> ru = new HashSet<RoleUser>();
 
 }
